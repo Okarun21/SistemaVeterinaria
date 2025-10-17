@@ -1,19 +1,22 @@
-public class RegistroClinico
+namespace Modelo_Veterinaria.Models
 {
-    public int IdRegistroClinico { get; set; }
-    public DateTime Fecha { get; set; }
-    public String Diagnostico { get; set; }
-    public String Tratamiento { get; set; }
-    public ServicioMedico servicioMedico { get; set; }
-
-    public RegistroClinico(int idregistroclinico, DateTime fecha, String diagnostico, String tratamiento, ServicioMedico serviciomedico)
+    public class RegistroClinico
     {
-        IdRegistroClinico = idregistroclinico;
-        Fecha = fecha;
-        Diagnostico = diagnostico;
-        Tratamiento = tratamiento;
-        servicioMedico = serviciomedico;
+        public int IdRegistroClinico { get; set; }
+        public DateTime Fecha { get; set; }
+        public String Diagnostico { get; set; }
+        public String Tratamiento { get; set; }
+        public ServicioMedico servicioMedico { get; set; }
+
+        public RegistroClinico(int idregistroclinico, DateTime fecha, String diagnostico, String tratamiento, ServicioMedico serviciomedico)
+        {
+            IdRegistroClinico = idregistroclinico;
+            Fecha = fecha;
+            Diagnostico = diagnostico;
+            Tratamiento = tratamiento;
+            servicioMedico = serviciomedico;
+        }
+
+
     }
-
-
 }

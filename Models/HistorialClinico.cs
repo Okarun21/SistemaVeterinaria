@@ -1,9 +1,12 @@
-public class HistorialClinico
+namespace Modelo_Veterinaria.Models
 {
-    public List<RegistroClinico> Registros { get; set; }
-
-    public HistorialClinico(List<RegistroClinico> registros)
+    public class HistorialClinico
     {
-        Registros = registros;
+        public List<RegistroClinico> Registros { get; set; }
+
+        public HistorialClinico(List<RegistroClinico> registros)
+        {
+            Registros = registros;
+        }
     }
 }

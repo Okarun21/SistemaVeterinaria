@@ -1,11 +1,14 @@
-public class Perro : Mascota
+namespace Modelo_Veterinaria.Models
 {
-    public Perro(int idmascota, string nombre, int edad, double peso, string tiposangre)
-        : base(idmascota, nombre, edad, peso, tiposangre)
+    public class Perro : Mascota
     {
-    }
-    public void Ladrar()
-    {
-        Console.WriteLine("El perro esta ladrando");
+        public Perro(int idmascota, string nombre, int edad, double peso, string tiposangre)
+            : base(idmascota, nombre, edad, peso, tiposangre)
+        {
+        }
+        public void Ladrar()
+        {
+            Console.WriteLine("El perro esta ladrando");
+        }
     }
 }

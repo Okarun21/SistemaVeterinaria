@@ -1,12 +1,14 @@
-public class Especialidad
+namespace Modelo_Veterinaria.Models
 {
-    public String Nombre { get; set; }
-    public String Descripcion { get; set; }
-
-    public Especialidad(String nombre, String descripcion)
+    public class Especialidad
     {
-        Nombre = nombre;
-        Descripcion = descripcion;
-    }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
 
+        public Especialidad(string nombre, string descripcion)
+        {
+            Nombre = nombre;
+            Descripcion = descripcion;
+        }
+    }
 }

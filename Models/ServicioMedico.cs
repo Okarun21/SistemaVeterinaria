@@ -1,14 +1,17 @@
-public class ServicioMedico
+namespace Modelo_Veterinaria.Models
 {
-    public DateTime Fecha { get; set; }
-    public String Descripcion { get; set; }
-    public String Detalles { get; set; }
-
-    public ServicioMedico(DateTime fecha, String descripcion, String detalles)
+    public class ServicioMedico
     {
-        Fecha = fecha;
-        Descripcion = descripcion;
-        Detalles = detalles;
-    }
+        public DateTime Fecha { get; set; }
+        public String Descripcion { get; set; }
+        public String Detalles { get; set; }
 
+        public ServicioMedico(DateTime fecha, String descripcion, String detalles)
+        {
+            Fecha = fecha;
+            Descripcion = descripcion;
+            Detalles = detalles;
+        }
+
+    }
 }

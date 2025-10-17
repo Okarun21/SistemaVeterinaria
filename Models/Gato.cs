@@ -1,12 +1,15 @@
-public class Gato : Mascota
+namespace Modelo_Veterinaria.Models
 {
-    public Gato(int idmascota, string nombre, int edad, double peso, string tiposangre)
-        : base(idmascota, nombre, edad, peso, tiposangre)
+    public class Gato : Mascota
     {
-    }
-    
-    public void Maullar()
-    {
-        Console.WriteLine("El gato está maullando");
+        public Gato(int idmascota, string nombre, int edad, double peso, string tiposangre)
+            : base(idmascota, nombre, edad, peso, tiposangre)
+        {
+        }
+
+        public void Maullar()
+        {
+            Console.WriteLine("El gato está maullando");
+        }
     }
 }
