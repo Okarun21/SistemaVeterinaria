@@ -33,3 +33,6 @@
 /home/dwayne/Documents/Base de Datos Avanzadas/Modelo_Veterinaria/obj/Debug/net9.0/Modelo_Veterinaria.pdb
 /home/dwayne/Documents/Base de Datos Avanzadas/Modelo_Veterinaria/obj/Debug/net9.0/Modelo_Veterinaria.genruntimeconfig.cache
 /home/dwayne/Documents/Base de Datos Avanzadas/Modelo_Veterinaria/obj/Debug/net9.0/ref/Modelo_Veterinaria.dll
+/home/dwayne/Documents/Base de Datos Avanzadas/Modelo_Veterinaria/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/dwayne/Documents/Base de Datos Avanzadas/Modelo_Veterinaria/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/dwayne/Documents/Base de Datos Avanzadas/Modelo_Veterinaria/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll

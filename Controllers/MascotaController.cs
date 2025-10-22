@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 namespace Modelo_Veterinaria.Controllers
 {
     [Route("[controller]")]
+    [ApiExplorerSettings(IgnoreApi = true)] // Ignora este controlador en Swagger
     public class MascotaController : Controller
     {
         private readonly ILogger<MascotaController> _logger;
@@ -17,11 +18,13 @@ namespace Modelo_Veterinaria.Controllers
             _logger = logger;
         }
 
+        [HttpGet] // Indica que este método responde a GET
         public IActionResult Index()
         {
             return View();
         }
 
+        [HttpGet("error")] // Método para manejo de errores, también con verbo HTTP explícito
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

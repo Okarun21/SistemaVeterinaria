@@ -1,32 +1,50 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Modelo_Veterinaria.Services;
+using Modelo_Veterinaria.Models;
 
 namespace Modelo_Veterinaria.Controllers
 {
-    [Route("[controller]")]
-    public class PersonaController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class PersonaController : ControllerBase
     {
-        private readonly ILogger<PersonaController> _logger;
+        private readonly PersonaService _service;
 
-        public PersonaController(ILogger<PersonaController> logger)
+        public PersonaController(PersonaService service)
         {
-            _logger = logger;
+            _service = service;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult GetAll() => Ok(_service.GetAll());
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
         {
-            return View();
+            var persona = _service.GetById(id);
+            if (persona == null) return NotFound();
+            return Ok(persona);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult Create(Persona persona)
         {
-            return View("Error!");
+            _service.Create(persona);
+            return CreatedAtAction(nameof(GetById), new { id = persona.Id_Persona }, persona);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, Persona persona)
+        {
+            if (!_service.Update(id, persona)) return NotFound();
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            if (!_service.Delete(id)) return NotFound();
+            return NoContent();
         }
     }
 }
